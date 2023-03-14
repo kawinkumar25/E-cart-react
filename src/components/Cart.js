@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import { useEffect } from 'react';
+import React from 'react';
 import "../styles/cart.css";
 
 const Cart = ({cart, setCart, handleChange}) => {
@@ -7,7 +6,7 @@ const Cart = ({cart, setCart, handleChange}) => {
     const handleRemove = (id) =>{
         const arr = cart.filter((item)=>item.id !== id);
         setCart(arr);
-        // handlePrice();
+
     }
 
   return (
