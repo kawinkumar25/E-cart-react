@@ -9,7 +9,7 @@ const Cards = ({item, handleClick,cart}) => {
 
     const btn=(product)=>{
       const index = cart.findIndex((item) => item.id === product.id);  
-        index >= 0 ? true : false
+        index >= 0 ? return true : return false
       
       
   }
