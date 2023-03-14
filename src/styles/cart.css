@@ -112,30 +112,3 @@ article{
     
     text-align: center;
 }
-.details{
-    text-align: center;
-    padding: 10px;
-}
-.details p:nth-child(1){
-    font-weight: bold;
-    padding: 10px;
-}
-.details p:nth-child(2){
-    color: grey;
-    font-size: 12px;
-    padding: 5px;
-}
-.details p:nth-child(3){
-    font-weight: bold;
-    color: grey;
-    padding: 10px;
-}
-.details button{
-    padding: 5px 10px;
-    border: none;
-    font-weight: bold;
-    background-color: skyblue;
-    outline: none;
-    border-radius: 2px;
-    padding: 10px;
-}
