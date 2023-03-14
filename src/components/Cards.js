@@ -1,20 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import React ,{ useState } from 'react';
+
 import '../styles/cards.css'
 
 const Cards = ({item, handleClick,cart}) => {
     const {title, author, price, img} = item;
-    const [text, setText]= useState("Add to cart");
-    // const remove=()=>
-    // {
-    //   if(text=="Add to cart")
-    //   {
-    //     setText("Remove");
-    //   }
-    //   else{
-    //     setText("Add to cart");
-    //   }
-    // }
+    
 
     const addItem = (item) => {
       const index = cart.findIndex((cartItem) => cartItem.id === item.id);
