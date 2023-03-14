@@ -10,11 +10,9 @@ import Marvel from './components/Marvel';
 import './styles/amazon.css';
 import list from './data';
 import {Routes,Route } from 'react-router-dom';
-import Cards from './components/Cards';
 import './App.css';
 import Horror from './components/Horror';
 const App = () => {
-	const [show, setShow] = useState(true);
 	const [cart , setCart] = useState([]);
 	
 	const handleClick = (item)=>{
@@ -23,7 +21,7 @@ const App = () => {
 		
 		cart.forEach((product)=>{
 			if (item.id === product.id)
-			// cart.splice(cart.findIndex(item.id),1);
+			
 			isPresent = true;
             
 		})
