@@ -6,23 +6,16 @@ const Cards = ({item, handleClick,cart}) => {
     const {title, author, price, img} = item;
     
 
-    const addItem = (item) => {
-      const index = cart.findIndex((cartItem) => cartItem.id === item.id);
-      if (index >= 0) {
-        cart.splice(cart.findIndex(cartitem => cartitem.id === item.id), 1)
-      } else {
-        cart.push({ ...item });
-      }
-      cart.setCart(cart);
-  };
-
 
     const btn=(product)=>{
       const index = cart.findIndex((item) => item.id === product.id);  
       if (index >= 0) {
           return true
       }
-      return false
+        else{
+            return false
+        }
+      
   }
       
   return (
