@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React,{ useState } from 'react';
+
 import '../styles/cards.css'
 
 const Cards = ({item,cart,setCart}) => {
