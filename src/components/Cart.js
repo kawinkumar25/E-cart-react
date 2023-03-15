@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import { useEffect } from 'react';
+
 import "../styles/cart.css";
 
 const Cart = ({cart, setCart, handleChange}) => {
