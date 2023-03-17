@@ -1,4 +1,4 @@
-import React , {createContext, useState,useContext} from 'react';
+import React , {createContext, useState,useContext, useMemo} from 'react';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import Search from './components/Search';
@@ -7,6 +7,7 @@ import './App.css';
 import Individual from './components/Individual';
 import Cards from './components/Cards';
 const mycontext = createContext();
+
 const App = () => {
 	 const [cart , setCart] = useState([]);
 	 const [searchCart,setSearchCart] = useState([]);
@@ -51,10 +52,10 @@ const App = () => {
 		return  index >= 0 ;
 		
 	}
-
+	const contextValue = useMemo(()=>({cart, setCart,searchCart,setSearchCart,addItem,btn,handleRemove,handleChange}),[cart,searchCart])
   return (
 	<>
-		<mycontext.Provider value={{cart, setCart,searchCart,setSearchCart,addItem,btn,handleRemove,handleChange}}>
+		<mycontext.Provider value = {contextValue}>
 		<div className='wholePage'>
 			<Navbar  />
 			<div className='search-and-list'>
