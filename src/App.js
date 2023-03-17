@@ -1,4 +1,4 @@
-import React , {createContext, useState,useContext, useMemo} from 'react';
+import React , {createContext, useState,useContext} from 'react';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import Search from './components/Search';
@@ -51,10 +51,10 @@ const App = () => {
 		return  index >= 0 ;
 		
 	}
-	const contextValue = useMemo(()=>({cart, setCart,searchCart,setSearchCart,addItem,btn,handleRemove,handleChange}))
+
   return (
 	<>
-		<mycontext.Provider value = {contextValue}>
+		<mycontext.Provider value={{cart, setCart,searchCart,setSearchCart,addItem,btn,handleRemove,handleChange}}>
 		<div className='wholePage'>
 			<Navbar  />
 			<div className='search-and-list'>
