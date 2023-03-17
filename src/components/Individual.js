@@ -10,7 +10,7 @@ const Individual = () => {
 
         <section>
             {searchCart.map(item =>
-                <div className="cards">
+                <div className="cards" key={item.id}>
                     <div className="image_box">
                         <img src={item.img} alt="Image" />
                     </div>
